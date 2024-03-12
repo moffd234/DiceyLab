@@ -4,22 +4,28 @@ public class Dice {
      * Generate 2 random numbers between 2 - 12 (inclusive)
      * Add the random numbers to get the sum
      */
-    private int sum;
+
     private int numDice;
+    private int minRoll;
+    private int maxRoll;
     Dice(int numDice){
         this.numDice = numDice;
     }
 
-    public int sumDice(){
+    public int tossAndSum(){
         int sum = 0;
-        for(int i = 0; i < numDice; i++){
-            sum += getRandNum();
+        for(int i = 0; i < numDice; i++) {
+            int randomNum = getRandNum();
+
+            sum += randomNum;
         }
+        // System.out.println(sum);
         return sum;
     }
 
     public int getRandNum() {
-        return (int) (Math.random() * (6 - 1) + 1);
+        int num = (int) ((Math.random() * 6) + 1);
+        return num;
     }
 
 

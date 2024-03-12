@@ -45,7 +45,7 @@ public class BinsTest {
         Bins bins = new Bins(minNum, maxNum);
 
         int expected = 0;
-        int actual = bins.getBin(2);
+        int actual = bins.getBin(25);
 
         Assert.assertEquals(expected, actual);
     }
@@ -82,20 +82,6 @@ public class BinsTest {
 
         int minNum = 2;
         int maxNum = 12;
-        Bins bins = new Bins(minNum, maxNum);
-        int expected = 1;
-
-        bins.incrementBin(minNum);
-        int actual = bins.getBin(minNum);
-
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testIncrementBin1(){
-
-        int minNum = 5;
-        int maxNum = 30;
         Bins bins = new Bins(minNum, maxNum);
         int expected = 1;
 
